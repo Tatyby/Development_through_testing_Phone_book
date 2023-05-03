@@ -25,6 +25,13 @@ public class PhoneBook {
     }
 
     public static String findByNumber(int number) {
-        return null;
+        if (phoneBook.containsValue(number)) {
+            return phoneBook.entrySet().stream().
+                    filter((x) -> x.getValue().equals(number))
+                    .map(Map.Entry::getKey)
+                    .findFirst().get();
+        } else {
+            return "Такого номера нет в списке контактов";
+        }
     }
 }
