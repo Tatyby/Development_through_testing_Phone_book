@@ -12,6 +12,7 @@ public class PhoneBook {
         System.out.println(add("Катя2", 350));
         System.out.println(add("Катя2", 400));
         System.out.println(findByNumber(400));
+        System.out.println(findByName("Катя"));
 
 
     }
@@ -33,5 +34,9 @@ public class PhoneBook {
         } else {
             return "Такого номера нет в списке контактов";
         }
+    }
+    public static int findByName(String name){
+      return  0;
+
     }
 }

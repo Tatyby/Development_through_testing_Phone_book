@@ -29,5 +29,12 @@ public class PhoneBookTest {
         PhoneBook.add("Света3", 160);
         Assert.assertEquals("Такого номера нет в списке контактов", PhoneBook.findByNumber(170));
     }
+    @Test
+    public void findByNameTest(){
+        PhoneBook.add("Света", 102);
+        PhoneBook.add("Света2", 103);
+        PhoneBook.add("Света3", 160);
+        Assert.assertEquals(102,PhoneBook.findByName("Света"));
+    }
 
 }
