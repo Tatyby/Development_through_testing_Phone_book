@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PhoneBookTest {
 
-    @Test
+     @Test
     public void addTest(){
         PhoneBook.add("Света", 102);
         PhoneBook.add("Света2", 103);
@@ -14,6 +14,20 @@ public class PhoneBookTest {
         int expected=3;
         Assert.assertEquals(expected,result);
 
+    }
+    @Test
+    public void findByNumberTest(){
+        PhoneBook.add("Света", 102);
+        PhoneBook.add("Света2", 103);
+        PhoneBook.add("Света3", 160);
+        Assert.assertEquals("Света", PhoneBook.findByNumber(102));
+    }
+    @Test
+    public void findByNumberTest1(){
+        PhoneBook.add("Света", 102);
+        PhoneBook.add("Света2", 103);
+        PhoneBook.add("Света3", 160);
+        Assert.assertEquals("Такого номера нет в списке контактов", PhoneBook.findByNumber(170));
     }
 
 }
