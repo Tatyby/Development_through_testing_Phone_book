@@ -43,6 +43,10 @@ public class PhoneBook {
     }
 
     public static String printAllNames(TreeMap<String, Integer> treeMap) {
-        return null;
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
+            System.out.println("Имя: " + entry.getKey() + ". Номер телефона: " + entry.getValue());
+        }
+        return "Распечатано, ваша телефонная книжка начинается с имени: " + treeMap.firstKey();
     }
+
 }
